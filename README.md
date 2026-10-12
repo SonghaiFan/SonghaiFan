@@ -45,7 +45,3 @@ A poker app for playing against language models and experimenting with strategie
 ---
 
 These projects will remain free and open source forever. A star is the biggest encouragement for me to keep building.
-
-Third-party model services may charge for API calls.
-
-[Follow along for updates.](https://github.com/SonghaiFan)
