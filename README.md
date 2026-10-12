@@ -10,37 +10,23 @@ My background is in human–computer interaction and information visualisation. 
 
 Research and thinking about human–computer interaction, information visualisation, and visual storytelling.
 
-**[VisDelta](https://github.com/SonghaiFan/visdelta)**
+**[VisDelta](https://github.com/SonghaiFan/visdelta)**: A declarative chart transition library with playback, pause, and progress scrubbing.
 
-A declarative chart transition library with playback, pause, and progress scrubbing.
+## Franklin Tools: Open-source tools for building, understanding, and working with software.
 
-## Franklin Tools
+**[LeftOpen](https://github.com/SonghaiFan/leftopen)**: A macOS menu bar app and CLI for viewing, identifying, and closing ports on localhost.
 
-Open-source tools for building, understanding, and working with software.
-
-**[LeftOpen](https://github.com/SonghaiFan/leftopen)**
-
-A macOS menu bar app and CLI for viewing, identifying, and closing ports on localhost.
-
-**[Token Flow](https://github.com/SonghaiFan/token-flow)**
-
-A local-first viewer for coding-agent conversations, token usage, and request traces.
+**[Token Flow](https://github.com/SonghaiFan/token-flow)**: A local-first viewer for coding-agent conversations, token usage, and request traces.
 
 ## Frankie Play
 
 Experiments with AI, interaction, and everyday play.
 
-**[Frankie Tarot](https://github.com/SonghaiFan/frankie-tarot)**
+**[Frankie Tarot](https://github.com/SonghaiFan/frankie-tarot)**: A bilingual tarot app with interactive spreads and a ChatGPT UI.
 
-A bilingual tarot app with interactive spreads and a ChatGPT UI.
+**[Franklin Tarot API](https://github.com/SonghaiFan/franklin-tarot-api)**: Bilingual tarot card data, spreads, and card draws through REST and MCP.
 
-**[Franklin Tarot API](https://github.com/SonghaiFan/franklin-tarot-api)**
-
-Bilingual tarot card data, spreads, and card draws through REST and MCP.
-
-**[Frankie Poker](https://github.com/SonghaiFan/frankie-poker)**
-
-A poker app for playing against language models and experimenting with strategies using virtual chips.
+**[Frankie Poker](https://github.com/SonghaiFan/frankie-poker)**: A poker app for playing against language models and experimenting with strategies using virtual chips.
 
 ---
 
