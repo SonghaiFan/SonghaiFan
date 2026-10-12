@@ -1,38 +1,51 @@
-<p align="center">
-  <img src="assets/profile-cover.svg" alt="Songhai Fan — Human-centred AI, information visualisation, and developer tools" width="100%" />
-</p>
+# Songhai Fan
 
-<p align="center">
-  <a href="https://songhai.site">Website</a> · Melbourne, Australia
-</p>
+**Study things. Build tools. Play with ideas.**
 
-I turn research ideas into tools people can use.
+My background is in human–computer interaction and information visualisation. I build tools for developers and explore how people interact with AI and data.
 
-My work sits across **human–AI interaction**, **information visualisation**, and **developer tools**. I like making complex systems easier to understand, explore, and work with.
+[Website](https://songhai.site)
 
-## Selected work
+## Frank Study
 
-### Tools & visualisation
+Research and thinking about human–computer interaction, information visualisation, and visual storytelling.
 
-| Project | What it does |
-| --- | --- |
-| [LeftOpen](https://github.com/SonghaiFan/leftopen) | A native macOS app and CLI to see what is listening on localhost, identify the project behind it, and close it safely. · [Website](https://leftopen.songhai.site/) |
-| [VisDelta](https://github.com/SonghaiFan/visdelta) | A declarative library for describing chart changes and exploring their transitions forward, backward, or by seeking to a frame. · [Docs & playground](https://songhaifan.github.io/visdelta/) |
-| [Token Flow](https://github.com/SonghaiFan/token-flow) | A local-first viewer that turns AI-agent traces into conversations, token flows, and inspectable request evidence. |
+## Franklin Tools
 
-### Interactive products
+Open-source tools for building, understanding, and working with software.
 
-| Project | What it does |
-| --- | --- |
-| [Frankie Poker](https://github.com/SonghaiFan/frankie-poker) | An open-source Texas Hold’em playground for experimenting with how language models make decisions. |
-| [Frankie Tarot](https://github.com/SonghaiFan/frankie-tarot) | A bilingual tarot experience built around user-led card reveals and reflective readings. · [Try it](https://tarot.songhai.site/) |
+**[LeftOpen](https://github.com/SonghaiFan/leftopen)**
 
-## Research & writing
+A macOS menu bar app and CLI for viewing, identifying, and closing ports on localhost.
 
-Narrative visualisation · Human–AI interaction · Interactive systems
+**[VisDelta](https://github.com/SonghaiFan/visdelta)**
 
-More about my work at [songhai.site](https://songhai.site).
+A declarative chart transition library with playback, pause, and progress scrubbing.
+
+**[Token Flow](https://github.com/SonghaiFan/token-flow)**
+
+A local-first viewer for coding-agent conversations, token usage, and request traces.
+
+**[Franklin Tarot API](https://github.com/SonghaiFan/franklin-tarot-api)**
+
+Bilingual tarot card data, spreads, and card draws through REST and MCP.
+
+## Frankie Play
+
+Experiments with AI, interaction, and everyday play.
+
+**[Frankie Tarot](https://github.com/SonghaiFan/frankie-tarot)**
+
+A bilingual tarot app with interactive spreads and a ChatGPT UI.
+
+**[Frankie Poker](https://github.com/SonghaiFan/frankie-poker)**
+
+A poker app for playing against language models and experimenting with strategies using virtual chips.
 
 ---
 
-<p align="center"><sub>Research into tools, and tools that invite people to think.</sub></p>
+These projects will remain free and open source forever. A star is the biggest encouragement for me to keep building.
+
+Third-party model services may charge for API calls.
+
+[Follow along for updates.](https://github.com/SonghaiFan)
