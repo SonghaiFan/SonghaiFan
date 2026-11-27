@@ -160,6 +160,15 @@
     "source_kind": "project-brand-artwork"
   },
   {
+    "id": "frankie-owspace-api",
+    "alt": "OWSPACE Archive",
+    "url": "https://dn-wezeit.qbox.me/ows/img/mobile/owspace.png",
+    "mode": "icon",
+    "source_kind": "official-brand-artwork",
+    "source_page": "https://www.owspace.com/mindex.html",
+    "attribution": "OWSPACE logo belongs to OWSPACE. OWSPACE Archive is an unofficial community project."
+  },
+  {
     "id": "frankie-poker",
     "alt": "Frankie Poker",
     "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-poker/main/.github/brand/icon-light.svg",

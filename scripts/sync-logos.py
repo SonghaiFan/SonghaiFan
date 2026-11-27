@@ -8,6 +8,8 @@ copy, not a private repository. Private changes need that public copy refreshed.
 The hourly workflow and manual dispatch use no cross-repository credentials.
 A source failure stops publication; the last valid icons stay in the README.
 """
+import base64
+import struct
 import concurrent.futures
 import copy
 import hashlib
@@ -30,7 +32,13 @@ def fetch(url):
         data = response.read(2_000_001)
     if len(data) > 2_000_000:
         raise ValueError('SVG exceeds 2 MB')
-    root = ET.fromstring(data)
+    if data.startswith(b'\x89PNG\r\n\x1a\n'):
+        width, height = struct.unpack('>II', data[16:24])
+        root = svg('svg', {'viewBox': f'0 0 {width} {height}'})
+        root.append(svg('image', {'width': str(width), 'height': str(height),
+                                 'href': 'data:image/png;base64,' + base64.b64encode(data).decode()}))
+    else:
+        root = ET.fromstring(data)
     if root.tag != f'{{{NS}}}svg':
         raise ValueError('Expected an SVG document')
     return data, root
