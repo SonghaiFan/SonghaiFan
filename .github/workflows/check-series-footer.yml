@@ -1,0 +1,26 @@
+name: Verify shared Pages footer
+on:
+  push:
+    paths:
+      - .github/actions/series-footer/**
+      - scripts/pages_footer.py
+      - tests/**
+      - assets/footers/**
+      - .github/workflows/check-series-footer.yml
+  pull_request:
+    paths:
+      - .github/actions/series-footer/**
+      - scripts/pages_footer.py
+      - tests/**
+      - assets/footers/**
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 -m unittest discover -s tests -v

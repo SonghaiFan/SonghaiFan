@@ -1,0 +1,17 @@
+name: Shared series footer for Pages
+description: Replace legacy series navigation in built HTML with the canonical README banner and verify the result.
+inputs:
+  series:
+    description: frank, franklin, or frankie
+    required: true
+  site-root:
+    description: Built HTML directory
+    default: _site
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        SERIES: ${{ inputs.series }}
+        SITE_ROOT: ${{ inputs.site-root }}
+      run: python3 "$GITHUB_ACTION_PATH/../../../scripts/pages_footer.py" --series "$SERIES" --site-root "$SITE_ROOT" --templates-root "$GITHUB_ACTION_PATH/../../.."
