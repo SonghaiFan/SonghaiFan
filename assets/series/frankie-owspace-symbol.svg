@@ -7,4 +7,4 @@
     <path d="M45 100L151 104L281 101V272H185V281H149V272H45V239H149V232H45V162L252 149L45 152Z" />
     <path d="M151 111L166 145L185 224L160 153ZM185 232L281 237V241H185Z" fill="#171717" />
   </g>
-</svg>
+<rect x="126" y="180" width="126" height="72" rx="20" fill="#242424" stroke="#ffffff" stroke-width="5" /><text x="189" y="228" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#ffffff">API</text></svg>
