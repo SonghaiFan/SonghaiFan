@@ -35,8 +35,6 @@ Open-source tools for building, understanding, and working with software.
   <img src="assets/apps/tasty-text-7bda8b4f.svg" width="32" height="32" alt="Tasty Text" title="Tasty Text" />
 </p>
 
-[REA](https://github.com/SonghaiFan/rea) · [Franklin Comments](https://github.com/SonghaiFan/franklin-comments) · [Obsidian Blog Publisher](https://github.com/SonghaiFan/obsidian-blog-publisher)
-
 ## Frankie Play
 
 Experiments with AI, interaction, and everyday play.

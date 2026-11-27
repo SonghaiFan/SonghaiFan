@@ -118,30 +118,12 @@ def main():
     # Stable aliases let every repository follow central artwork without copying SVGs.
     aliases = ROOT / 'assets/series'
     aliases.mkdir(parents=True, exist_ok=True)
-    by_path = {}
     for item, path, content in results:
         alias = aliases / (item['id'] + '.svg')
         alias.write_text(content)
-        by_path[path] = 'https://raw.githubusercontent.com/SonghaiFan/SonghaiFan/main/assets/series/' + alias.name
-    footers = ROOT / 'assets/footers'
-    footers.mkdir(parents=True, exist_ok=True)
-    headings = {'frank': 'Frank Study', 'franklin': 'Franklin Tools', 'frankie': 'Frankie Play'}
-    for series, heading in headings.items():
-        section = re.search(r'^## ' + heading + r'\n([\s\S]*?)(?=^## |\n---|\Z)', readme, re.M).group(1)
-        paragraph = re.search(r'<p align="left">[\s\S]*?</p>', section)
-        row = paragraph.group().replace('align="left"', 'align="center"')
-        for path, alias in by_path.items():
-            row = row.replace('src="' + path + '"', 'src="' + alias + '"')
-        extras = section[paragraph.end():].strip()
-        extras = re.sub(r'\[([^]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', extras)
-        parts = ['<!-- series-footer:start -->', row]
-        if extras:
-            parts.append('<p align="center">' + extras + '</p>')
-        label = {'frank': 'Frank', 'franklin': 'Franklin', 'frankie': 'Frankie'}[series]
-        parts.append('<p align="center"><sub>' + label + ' series · Made by <a href="https://github.com/SonghaiFan">Songhai Fan</a></sub></p>')
-        parts.append('<!-- series-footer:end -->')
-        (footers / (series + '.html')).write_text('\n\n'.join(parts) + '\n')
-    print(f'Refreshed {len(results)} logos and three shared series footers.')
+    # Footer templates are maintained in assets/footers independently of the
+    # profile README, whose selection can exclude forks or other projects.
+    print(f'Refreshed {len(results)} logos; shared footer templates stay independent.')
 
 if __name__ == '__main__':
     main()
