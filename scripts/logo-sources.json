@@ -1,0 +1,191 @@
+[
+  {
+    "id": "syuze",
+    "alt": "syuze 叙仄",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/visdelta/main/.github/brand/series/syuze.svg",
+    "mode": "series",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "news-metro",
+    "alt": "News Metro",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/visdelta/main/.github/brand/series/news-metro.svg",
+    "mode": "series",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "ttng",
+    "alt": "ttng",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/narrative-graph/main/.github/brand/series/ttng.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "visdelta",
+    "alt": "VisDelta",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/visdelta/main/.github/brand/series/visdelta.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "cytocausal",
+    "alt": "cytocausal",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/cytocausal/main/.github/brand/series/cytocausal.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "aethel",
+    "alt": "Aethel",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/aethel/deploy/.github/brand/series/aethel.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "leftopen",
+    "alt": "LeftOpen",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/leftopen/main/.github/brand/series/leftopen.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "her-os",
+    "alt": "her-os",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/leftopen/main/.github/brand/series/her-os.svg",
+    "mode": "series",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "roc",
+    "alt": "ROC",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/roc-ui/main/.github/brand/series/roc.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "token-flow",
+    "alt": "Token Flow",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/token-flow/main/.github/brand/series/token-flow.svg",
+    "mode": "series",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "aboard",
+    "alt": "Aboard",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/leftopen/main/.github/brand/series/aboard.svg",
+    "mode": "series",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "structured-text",
+    "alt": "Structured Text",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/leftopen/main/.github/brand/series/structured-text.svg",
+    "mode": "series",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "tasty-text",
+    "alt": "Tasty Text",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/leftopen/main/.github/brand/series/tasty-text.svg",
+    "mode": "series",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "frankie-brain",
+    "alt": "Frankie Brain",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-brain/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-brain-ios",
+    "alt": "Frankie Brain · iOS",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-cards/main/.github/brand/series/brain-ios.svg",
+    "mode": "mirrored-icon",
+    "source_kind": "public-series-mirror"
+  },
+  {
+    "id": "frankie-cards",
+    "alt": "Frankie Cards",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-cards/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-dictionary",
+    "alt": "Blue Dictionary",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-dictionary/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-generative-art",
+    "alt": "Frankie Generative Art Gallery",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-generative-art/simple/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-goal",
+    "alt": "Frankie Goal",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-goal/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-guitar",
+    "alt": "Frankie Guitar",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-guitar/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-list",
+    "alt": "Frank’s Life List",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-list/main/.github/brand/icon-light.svg",
+    "mode": "list",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-mbti",
+    "alt": "Frankie MBTI",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-mbti/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-onitama",
+    "alt": "Frankie Onitama",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-onitama/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-poker",
+    "alt": "Frankie Poker",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-poker/main/.github/brand/icon-light.svg",
+    "mode": "poker",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-stocks",
+    "alt": "Frankie Stocks",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-stocks/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-tarot",
+    "alt": "Frankie Tarot",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-tarot/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-werewolf",
+    "alt": "Werewolf Local",
+    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-werewolf/main/.github/brand/icon-light.svg",
+    "mode": "icon",
+    "source_kind": "project-brand-artwork"
+  }
+]

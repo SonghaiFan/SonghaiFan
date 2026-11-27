@@ -1,0 +1,35 @@
+name: Sync project logos
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/sync-logos.py
+      - scripts/logo-sources.json
+      - .github/workflows/sync-logos.yml
+permissions:
+  contents: write
+concurrency:
+  group: profile-logo-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh source artwork
+        run: python scripts/sync-logos.py
+      - name: Check changes
+        run: git diff --check
+      - name: Publish changed logos
+        run: |
+          git add README.md assets/apps
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'docs: sync project logo artwork'
+          git push
