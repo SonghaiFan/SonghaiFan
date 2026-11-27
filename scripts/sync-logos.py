@@ -70,12 +70,20 @@ def tile(source, mode):
     root.append(source)
     return root
 
-def refresh(item):
-    try:
-        data, source = fetch(item['url'])
-    except Exception as error:
-        raise RuntimeError(f"Cannot refresh {item['id']} from {item['url']}") from error
-    root = tile(source, item['mode'])
+def refresh(item, source):
+    root = copy.deepcopy(tile(source, item['mode']))
+    if item.get('badge'):
+        badge = item['badge']
+        if badge not in {'iOS', 'API'}:
+            raise ValueError(f'Unsupported badge: {badge}')
+        root.append(svg('rect', {'x': '126', 'y': '180', 'width': '126', 'height': '72',
+                                'rx': '20', 'fill': '#242424', 'stroke': '#ffffff',
+                                'stroke-width': '5'}))
+        label = svg('text', {'x': '189', 'y': '228', 'text-anchor': 'middle',
+                             'font-family': 'Arial, Helvetica, sans-serif',
+                             'font-size': '42', 'font-weight': '700', 'fill': '#ffffff'})
+        label.text = badge
+        root.append(label)
     content = '\n'.join(line.rstrip() for line in ET.tostring(root, encoding='unicode').splitlines()) + '\n'
     digest = hashlib.sha256(content.encode()).hexdigest()[:8]
     path = f"assets/apps/{item['id']}-{digest}.svg"
@@ -83,9 +91,15 @@ def refresh(item):
 
 def main():
     entries = json.loads((ROOT / 'scripts/logo-sources.json').read_text())
-    # Resolve every source before writing, so a missing source cannot publish a partial update.
+    by_id = {item['id']: item for item in entries}
+    entries = [{**by_id[item['logo_of']], **item} if item.get('logo_of') else item
+               for item in entries]
+    # Fetch each shared source once, so base and variant use identical artwork.
+    urls = list(dict.fromkeys(item['url'] for item in entries))
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
-        results = list(pool.map(refresh, entries))
+        sources = dict(zip(urls, pool.map(fetch, urls)))
+    # Resolve every source before writing, so a missing source cannot publish a partial update.
+    results = [refresh(item, sources[item['url']][1]) for item in entries]
     readme = (ROOT / 'README.md').read_text()
     for item, path, content in results:
         pattern = r'src="[^"]+"(?= width="32" height="32" alt="' + re.escape(item['alt']) + r'")'

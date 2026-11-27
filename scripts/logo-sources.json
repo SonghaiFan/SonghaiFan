@@ -100,9 +100,8 @@
   {
     "id": "frankie-brain-ios",
     "alt": "Frankie Brain · iOS",
-    "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-cards/main/.github/brand/series/brain-ios.svg",
-    "mode": "mirrored-icon",
-    "source_kind": "public-series-mirror"
+    "logo_of": "frankie-brain",
+    "badge": "iOS"
   },
   {
     "id": "frankie-cards",
@@ -180,6 +179,12 @@
     "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-tarot/main/.github/brand/icon-light.svg",
     "mode": "icon",
     "source_kind": "project-brand-artwork"
+  },
+  {
+    "id": "frankie-tarot-api",
+    "alt": "Frankie Tarot API",
+    "logo_of": "frankie-tarot",
+    "badge": "API"
   },
   {
     "id": "frankie-werewolf",
