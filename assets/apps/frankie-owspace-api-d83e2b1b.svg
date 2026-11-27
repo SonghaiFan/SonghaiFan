@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="owspace-title owspace-desc">
+  <title id="owspace-title">OWSPACE Archive</title>
+  <desc id="owspace-desc">OWSPACE symbol adapted from the official mobile homepage reference. The mark belongs to OWSPACE; this archive is an unofficial community project.</desc>
+  <rect width="256" height="256" rx="56" fill="#171717" />
+  <g transform="matrix(.88 0 0 .88 -15.5 -24.5)" fill="#ffffff">
+    <path d="M45 66H149V97H45ZM182 66H281V98H182Z" />
+    <path d="M45 100L151 104L281 101V272H185V281H149V272H45V239H149V232H45V162L252 149L45 152Z" />
+    <path d="M151 111L166 145L185 224L160 153ZM185 232L281 237V241H185Z" fill="#171717" />
+  </g>
+</svg>
