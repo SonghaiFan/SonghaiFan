@@ -116,14 +116,16 @@
     "alt": "Frankie Generative Art Gallery",
     "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-generative-art/simple/.github/brand/icon-light.svg",
     "mode": "icon",
-    "source_kind": "project-brand-artwork"
+    "source_kind": "project-brand-artwork",
+    "dark_url": "https://raw.githubusercontent.com/SonghaiFan/frankie-generative-art/simple/.github/brand/icon-dark.svg"
   },
   {
     "id": "frankie-goal",
     "alt": "Frankie Goal",
     "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-goal/main/.github/brand/icon-light.svg",
     "mode": "icon",
-    "source_kind": "project-brand-artwork"
+    "source_kind": "project-brand-artwork",
+    "dark_url": "https://raw.githubusercontent.com/SonghaiFan/frankie-goal/main/.github/brand/icon-dark.svg"
   },
   {
     "id": "frankie-guitar",

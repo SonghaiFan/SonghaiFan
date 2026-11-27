@@ -102,30 +102,51 @@ def main():
     entries = [{**by_id[item['logo_of']], **item} if item.get('logo_of') else item
                for item in entries]
     # Fetch each shared source once, so base and variant use identical artwork.
-    urls = list(dict.fromkeys(item['url'] for item in entries))
+    urls = list(dict.fromkeys(url for item in entries for url in [item['url'], item.get('dark_url')] if url))
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as pool:
         sources = dict(zip(urls, pool.map(fetch, urls)))
     # Resolve every source before writing, so a missing source cannot publish a partial update.
     results = [refresh(item, sources[item['url']][1]) for item in entries]
+    dark_results = [refresh({**item, 'id': item['id'] + '-dark', 'alias': item['id'] + '-dark'}, sources[item['dark_url']][1])
+                    for item in entries if item.get('dark_url')]
     readme = (ROOT / 'README.md').read_text()
     for item, path, content in results:
         pattern = r'src="[^"]+"(?= width="32" height="32" alt="' + re.escape(item['alt']) + r'")'
         readme, count = re.subn(pattern, f'src="{path}"', readme)
         if count != 1:
             raise ValueError(f"Expected one README image for {item['id']}, found {count}")
+    # README pictures follow the viewer's colour scheme; Pages selects the same
+    # supplied variants using its actual page surface instead of changing colours.
+    for item, path, content in dark_results:
+        base_id = item['id'].removesuffix('-dark')
+        pattern = r'<picture data-monochrome="' + re.escape(base_id) + r'">[\s\S]*?</picture>'
+        image_pattern = r'<img[^>]+alt="' + re.escape(item['alt']) + r'"[^>]*>'
+        match = re.search(pattern, readme)
+        image = re.search(image_pattern, match.group() if match else readme).group()
+        picture = '<picture data-monochrome="' + base_id + '"><source media="(prefers-color-scheme: dark)" srcset="' + path + '">' + image + '</picture>'
+        readme = re.sub(pattern if match else image_pattern, lambda _: picture, readme, count=1)
+        for footer in (ROOT / 'assets/footers').glob('*.html'):
+            template = footer.read_text()
+            match = re.search(pattern, template)
+            image_match = re.search(image_pattern, match.group() if match else template)
+            if image_match:
+                dark_url = 'https://raw.githubusercontent.com/SonghaiFan/SonghaiFan/main/assets/series/' + item['id'] + '.svg'
+                picture = '<picture data-monochrome="' + base_id + '"><source media="(prefers-color-scheme: dark)" srcset="' + dark_url + '">' + image_match.group() + '</picture>'
+                footer.write_text(re.sub(pattern if match else image_pattern, lambda _: picture, template, count=1))
+    all_results = results + dark_results
     assets = ROOT / 'assets/apps'
     assets.mkdir(parents=True, exist_ok=True)
-    for _, path, content in results:
+    for _, path, content in all_results:
         (ROOT / path).write_text(content)
     (ROOT / 'README.md').write_text(readme)
-    referenced = {path for _, path, _ in results}
+    referenced = {path for _, path, _ in all_results}
     for old in assets.glob('*.svg'):
         if old.relative_to(ROOT).as_posix() not in referenced:
             old.unlink()
     # Stable aliases let every repository follow central artwork without copying SVGs.
     aliases = ROOT / 'assets/series'
     aliases.mkdir(parents=True, exist_ok=True)
-    for item, path, content in results:
+    for item, path, content in all_results:
         alias = aliases / (item.get('alias', item['id']) + '.svg')
         alias.write_text(content)
     # Footer templates are maintained in assets/footers independently of the
