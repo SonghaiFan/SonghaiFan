@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Apply the shared series banner without changing project documentation or signatures."""
 import argparse
+import hashlib
 from pathlib import Path
 import re
 
@@ -43,6 +44,17 @@ def main():
             if after != before:
                 path.write_text(after)
                 print('Updated ' + name)
+
+    # A changed shared renderer must also give scheduled Pages builds a new
+    # project revision, even when project source and README text are unchanged.
+    workflow = args.repo_root / '.github/workflows/pages.yml'
+    if workflow.exists() and 'SonghaiFan/SonghaiFan/.github/actions/series-footer@' in workflow.read_text():
+        renderer = args.templates_root / 'scripts/pages_footer.py'
+        revision = hashlib.sha256(renderer.read_bytes() + banner.encode()).hexdigest() + '\n'
+        path = args.repo_root / '.github/series-footer.version'
+        if not path.exists() or path.read_text() != revision:
+            path.write_text(revision)
+            print('Updated shared Pages footer revision')
 
 
 if __name__ == '__main__':

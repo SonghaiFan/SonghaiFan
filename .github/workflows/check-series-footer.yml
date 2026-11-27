@@ -4,6 +4,8 @@ on:
     paths:
       - .github/actions/series-footer/**
       - scripts/pages_footer.py
+      - scripts/apply-series-footer.py
+      - .github/workflows/sync-series-footer.yml
       - tests/**
       - assets/footers/**
       - .github/workflows/check-series-footer.yml
@@ -11,6 +13,8 @@ on:
     paths:
       - .github/actions/series-footer/**
       - scripts/pages_footer.py
+      - scripts/apply-series-footer.py
+      - .github/workflows/sync-series-footer.yml
       - tests/**
       - assets/footers/**
 permissions:

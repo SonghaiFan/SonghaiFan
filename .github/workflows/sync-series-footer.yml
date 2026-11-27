@@ -19,6 +19,7 @@ jobs:
           sparse-checkout-cone-mode: false
           sparse-checkout: |
             scripts/apply-series-footer.py
+            scripts/pages_footer.py
             assets/footers/
           persist-credentials: false
       - uses: actions/setup-python@v5
@@ -28,12 +29,13 @@ jobs:
         env:
           SERIES: ${{ inputs.series }}
         run: python .series-footer-source/scripts/apply-series-footer.py --series "$SERIES" --templates-root .series-footer-source
-      - name: Publish README changes
+      - name: Publish README and footer revision changes
         run: |
           git diff --check
           for file in README.md README.zh-CN.md README_zh.md; do
             if test -f "$file"; then git add "$file"; fi
           done
+          if test -f .github/series-footer.version; then git add .github/series-footer.version; fi
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
