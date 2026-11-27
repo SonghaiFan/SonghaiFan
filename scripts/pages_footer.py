@@ -40,15 +40,15 @@ def icons(content, base_url='', template=False):
     return parser.items
 
 STYLE = """<style>
-#series-footer{display:block!important;position:static!important;box-sizing:border-box;width:100%;max-width:100%;margin:0 auto;padding:24px 20px;border-top:1px solid #8883;font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:center;background:transparent;color:inherit}
-#series-footer p{display:block;max-width:960px;margin:0 auto 12px;text-align:center}
+#series-footer{display:block!important;position:static!important;box-sizing:border-box;width:100%;max-width:100%;margin:0 auto;padding:24px 20px;border-top:1px solid #8883;font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-align:center;background:#ffffff;color:#24292f;color-scheme:light}
+#series-footer p{display:block;max-width:960px;margin:0 auto 12px;text-align:center;color:inherit}
 #series-footer p:first-of-type{font-size:16px;line-height:44px}
 #series-footer p:last-of-type{margin-bottom:0}
 #series-footer a{display:inline-block;vertical-align:middle;padding:0;margin:0;border:0;border-radius:0;background:none;box-shadow:none;color:inherit}
 #series-footer p:first-of-type a{line-height:0}
 #series-footer a::before,#series-footer a::after{content:none!important}
 #series-footer img{display:inline-block!important;width:32px!important;height:32px!important;max-width:none!important;object-fit:contain;vertical-align:middle;border:0!important;border-radius:0;box-shadow:none;background:transparent}
-#series-footer sub{font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;vertical-align:baseline}
+#series-footer sub{font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;vertical-align:baseline;color:inherit}
 </style>"""
 
 def render(content, template, series):
