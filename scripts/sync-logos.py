@@ -126,7 +126,7 @@ def main():
     aliases = ROOT / 'assets/series'
     aliases.mkdir(parents=True, exist_ok=True)
     for item, path, content in results:
-        alias = aliases / (item['id'] + '.svg')
+        alias = aliases / (item.get('alias', item['id']) + '.svg')
         alias.write_text(content)
     # Footer templates are maintained in assets/footers independently of the
     # profile README, whose selection can exclude forks or other projects.
