@@ -36,6 +36,13 @@ def fetch(url):
     return data, root
 
 def tile(source, mode):
+    if mode == 'board':
+        # The whiteboard surface is the app tile, with no second frame around it.
+        board = copy.deepcopy(next(el for el in source if el.tag == f'{{{NS}}}svg'))
+        board.attrib.update(viewBox='48 48 416 418', width='256', height='256')
+        board.attrib.pop('x', None)
+        board.attrib.pop('y', None)
+        return board
     if mode == 'series':
         return source
     source = copy.deepcopy(source)

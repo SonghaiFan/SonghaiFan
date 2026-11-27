@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img"><title>Aboard</title><rect x="2" y="2" width="252" height="252" rx="48" fill="#ffffff" stroke="#deded8" stroke-width="3" /><svg viewBox="0 0 512 512" role="img" aria-labelledby="aboard-title aboard-desc" x="30" y="30" width="196" height="196">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="48 48 416 418" role="img" aria-labelledby="aboard-title aboard-desc" width="256" height="256">
   <title id="aboard-title">Aboard</title>
   <desc id="aboard-desc">A minimal white enamel board with a soft lowercase a in relief and a small dark marker tray.</desc>
   <defs>
@@ -27,4 +27,4 @@
   <path d="M112 44H200V166Q200 184 224 184V216H207Q179 216 165 200Q145 216 112 216C66 216 36 184 36 132C36 80 66 44 112 44Z M114 80C88 80 76 98 76 132C76 164 88 180 114 180C144 180 164 162 164 132V80Z" transform="matrix(1.23 0 0 1.2 93.5 95.5)" fill-rule="evenodd" fill="url(#relief)" stroke="url(#bevel)" stroke-width="1.8" filter="url(#soft-relief)" />
   <path d="M219 442H293Q294 442 294 443V464H218V443Q218 442 219 442Z" fill="url(#tray)" />
   <path d="M219 443H293" fill="none" stroke="#604732" stroke-opacity=".5" stroke-width=".7" />
-</svg></svg>
+</svg>

@@ -30,7 +30,7 @@ Open-source tools for building, understanding, and working with software.
   <a href="https://github.com/SonghaiFan/her-os"><img src="assets/apps/her-os-2cf04cc9.svg" width="32" height="32" alt="her-os" title="her-os" /></a>&nbsp;
   <a href="https://github.com/SonghaiFan/roc-ui"><img src="assets/apps/roc-b9e03bd9.svg" width="32" height="32" alt="ROC" title="ROC" /></a>&nbsp;
   <a href="https://github.com/SonghaiFan/token-flow"><img src="assets/apps/token-flow-6a007719.svg" width="32" height="32" alt="Token Flow" title="Token Flow" /></a>&nbsp;
-  <img src="assets/apps/aboard-ba337dcb.svg" width="32" height="32" alt="Aboard" title="Aboard" />&nbsp;
+  <img src="assets/apps/aboard-5b71dec3.svg" width="32" height="32" alt="Aboard" title="Aboard" />&nbsp;
   <img src="assets/apps/structured-text-d64229f7.svg" width="32" height="32" alt="Structured Text" title="Structured Text · local package" />&nbsp;
   <img src="assets/apps/tasty-text-7bda8b4f.svg" width="32" height="32" alt="Tasty Text" title="Tasty Text" />
 </p>
