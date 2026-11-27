@@ -98,12 +98,6 @@
     "source_kind": "project-brand-artwork"
   },
   {
-    "id": "frankie-brain-ios",
-    "alt": "Frankie Brain · iOS",
-    "logo_of": "frankie-brain",
-    "badge": "iOS"
-  },
-  {
     "id": "frankie-cards",
     "alt": "Frankie Cards",
     "url": "https://raw.githubusercontent.com/SonghaiFan/frankie-cards/main/.github/brand/icon-light.svg",
