@@ -5,7 +5,7 @@
       <rect x="40" y="70" width="250" height="428.6" />
     </clipPath>
 
-    
+
     <radialGradient id="halo" gradientUnits="userSpaceOnUse" cx="230" cy="259.8" r="150">
       <stop offset="0" stop-color="#efe4c6" stop-opacity="1" />
       <stop offset="0.45" stop-color="#f3d9b4" stop-opacity="0.85" />
@@ -37,10 +37,10 @@
     </radialGradient>
   </defs>
 
-  
+
   <polygon points="40,70 64,46 314,46 314,474.6 290,498.6 40,498.6" fill="#1c1b1a" />
 
-  
+
   <g clip-path="url(#face)">
     <rect x="40" y="70" width="250" height="428.6" fill="#ff6424" />
     <rect x="40" y="70" width="250" height="428.6" fill="url(#rose)" />
@@ -50,9 +50,9 @@
     <rect x="40" y="70" width="250" height="428.6" fill="url(#sky)" />
   </g>
 
-  
+
   <rect x="44" y="74" width="242" height="420.6" fill="none" stroke="#1c1b1a" stroke-width="8" />
 
-  
+
   <path transform="translate(72 104) scale(0.52)" fill="#ffffff" d="M50 0 C54 34 66 46 100 50 C66 54 54 66 50 100 C46 66 34 54 0 50 C34 46 46 34 50 0Z" />
 </svg></svg>
